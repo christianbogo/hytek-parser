@@ -28,8 +28,8 @@ def parse_hy3(
         "default_country": default_country,
     }
 
-    # Read file
-    with open(file) as f:
+    # Read file (latin-1 to safely handle extended characters from Hytek exports)
+    with open(file, encoding="latin-1") as f:
         lines = [line.strip() for line in f]
 
     # Make sure this is the right kind of file

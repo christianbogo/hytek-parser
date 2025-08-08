@@ -44,6 +44,9 @@ pre-commit = "^2.17.0"
 taskipy = "^1.9.0"
 pip-licenses = "^3.5.3"
 
+[tool.poetry.scripts]
+hy3-to-json = "hytek_parser.cli:main"
+
 [tool.taskipy.tasks]
 # Lint the app
 lint = { cmd = "pre-commit run --all-files -v", help = "lint using flake8, mypy, black, isort, and pre-commit" }
